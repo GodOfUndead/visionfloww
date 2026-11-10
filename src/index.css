@@ -1,0 +1,90 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, monospace;
+  --color-bg: #fcf9f1;
+  --color-sidebar: #ffffff;
+  --color-text-main: #000000;
+  --color-text-muted: #4a4a4a;
+  --color-accent: #ff90e8;
+  --color-border: #000000;
+  --color-pastel-mint: #e1fff3;
+  --color-pastel-blue: #e1f4ff;
+  --color-pastel-orange: #ffe1e1;
+}
+
+:root {
+  --color-bg: #fcf9f1;
+  --color-sidebar: #ffffff;
+  --color-text-main: #000000;
+  --color-text-muted: #4a4a4a;
+  --color-accent: #ff90e8;
+  --color-border: #000000;
+  --color-pastel-mint: #e1fff3;
+  --color-pastel-blue: #e1f4ff;
+  --color-pastel-orange: #ffe1e1;
+}
+
+html, body {
+  background-color: var(--color-bg);
+  color: var(--color-text-main);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -webkit-tap-highlight-color: transparent;
+  overscroll-behavior-y: none;
+}
+
+/* Touch & tap optimizations for Android */
+button, a, input, select, textarea {
+  touch-action: manipulation;
+}
+
+/* Neo-brutalist utility shadows and borders */
+.shadow-brutal {
+  box-shadow: 4px 4px 0px 0px #000000;
+}
+
+.shadow-brutal-sm {
+  box-shadow: 2px 2px 0px 0px #000000;
+}
+
+.shadow-brutal-lg {
+  box-shadow: 6px 6px 0px 0px #000000;
+}
+
+.shadow-brutal-hover:hover {
+  box-shadow: 6px 6px 0px 0px #000000;
+  transform: translate(-2px, -2px);
+}
+
+.shadow-brutal-active:active {
+  box-shadow: 0px 0px 0px 0px #000000;
+  transform: translate(2px, 2px);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+::-webkit-scrollbar-track {
+  background: #f1ede1;
+}
+::-webkit-scrollbar-thumb {
+  background: #000000;
+}
+
+@media print {
+  aside, nav, header, .no-print, .btn-row {
+    display: none !important;
+  }
+  body, main {
+    background: white !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+  .print-only {
+    display: block !important;
+  }
+}

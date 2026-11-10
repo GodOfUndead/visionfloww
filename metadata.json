@@ -1,0 +1,6 @@
+{
+  "name": "VisionFlow - Optical & Eye Clinic Management",
+  "description": "Neo-brutalist optical clinic management platform for tracking patient prescriptions (RE, LE, ADD), frames, glasses, drops, billing, received payment, and profit.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <rect width="512" height="512" fill="#ff90e8" rx="0" />
+  <rect x="24" y="24" width="464" height="464" fill="#fcf9f1" stroke="#000000" stroke-width="20" />
+  <!-- Eye graphic with neo-brutalist styling -->
+  <path d="M 96 256 C 144 160 368 160 416 256 C 368 352 144 352 96 256 Z" fill="#ffffff" stroke="#000000" stroke-width="20" stroke-linejoin="round" />
+  <!-- Iris -->
+  <circle cx="256" cy="256" r="64" fill="#ff90e8" stroke="#000000" stroke-width="16" />
+  <!-- Pupil -->
+  <circle cx="256" cy="256" r="28" fill="#000000" />
+  <!-- Sparkle light reflection -->
+  <circle cx="242" cy="242" r="10" fill="#ffffff" />
+</svg>
