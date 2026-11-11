@@ -1,0 +1,109 @@
+{
+  "entities": {
+    "Patient": {
+      "title": "Patient",
+      "description": "Optical clinic patient record including prescription, products, billing, and profit",
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Unique record identifier"
+        },
+        "date": {
+          "type": "string",
+          "description": "Date of entry (YYYY-MM-DD)"
+        },
+        "patientName": {
+          "type": "string",
+          "description": "Full name of the patient",
+          "maxLength": 100
+        },
+        "mobileNumber": {
+          "type": "string",
+          "description": "Contact phone number",
+          "maxLength": 20
+        },
+        "address": {
+          "type": "string",
+          "description": "Address of the patient",
+          "maxLength": 250
+        },
+        "re": {
+          "type": "string",
+          "description": "Right Eye prescription power",
+          "maxLength": 50
+        },
+        "le": {
+          "type": "string",
+          "description": "Left Eye prescription power",
+          "maxLength": 50
+        },
+        "add": {
+          "type": "string",
+          "description": "Near vision ADD power",
+          "maxLength": 50
+        },
+        "glass": {
+          "type": "string",
+          "description": "Glass / Lens specifications",
+          "maxLength": 150
+        },
+        "frame": {
+          "type": "string",
+          "description": "Frame model and details",
+          "maxLength": 150
+        },
+        "drop": {
+          "type": "string",
+          "description": "Eye drop / medications",
+          "maxLength": 150
+        },
+        "totalBill": {
+          "type": "number",
+          "description": "Total invoice bill in INR"
+        },
+        "receivedPayment": {
+          "type": "number",
+          "description": "Received payment amount in INR"
+        },
+        "profit": {
+          "type": "number",
+          "description": "Profit amount in INR"
+        },
+        "glassesDelivered": {
+          "type": "boolean",
+          "description": "Whether glasses have been delivered"
+        },
+        "deliveryDate": {
+          "type": "string",
+          "description": "Delivery date if delivered"
+        },
+        "imageUrl": {
+          "type": "string",
+          "description": "Patient or prescription slip image URL or base64 data"
+        },
+        "clinicName": {
+          "type": "string",
+          "description": "Clinic name"
+        },
+        "createdAt": {
+          "type": "number",
+          "description": "Creation timestamp"
+        },
+        "updatedAt": {
+          "type": "number",
+          "description": "Last updated timestamp"
+        }
+      },
+      "required": ["patientName", "totalBill", "receivedPayment", "profit"]
+    }
+  },
+  "firestore": {
+    "/patients/{patientId}": {
+      "schema": {
+        "$ref": "#/entities/Patient"
+      },
+      "description": "Global synchronized collection of optical patient records"
+    }
+  }
+}

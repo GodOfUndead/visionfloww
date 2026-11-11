@@ -1,0 +1,32 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    function isValidId(id) {
+      return id is string && id.size() <= 128 && id.matches('^[a-zA-Z0-9_\\-]+$');
+    }
+
+    function incoming() {
+      return request.resource.data;
+    }
+
+    function isValidPatient(data) {
+      return data.patientName is string && data.patientName.size() <= 100 &&
+             data.totalBill is number && data.totalBill >= 0 &&
+             data.receivedPayment is number && data.receivedPayment >= 0 &&
+             data.profit is number;
+    }
+
+    match /patients/{patientId} {
+      allow read: if true;
+      allow create: if isValidId(patientId) && isValidPatient(incoming());
+      allow update: if isValidId(patientId) && isValidPatient(incoming());
+      allow delete: if isValidId(patientId);
+    }
+
+    // Default deny for all other paths
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+}

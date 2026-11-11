@@ -112,12 +112,15 @@ export const Layout: React.FC<LayoutProps> = ({
           )}
 
           <div className="p-3 bg-[#e1f4ff] border-2 border-black text-[10px] font-black uppercase tracking-tight shadow-[2px_2px_0px_0px_rgba(0,0,0,1)]">
-            <div className="flex items-center gap-1.5 text-black">
-              <Glasses className="w-4 h-4" />
-              <span>VisionFlow Optical</span>
+            <div className="flex items-center justify-between text-black">
+              <div className="flex items-center gap-1.5">
+                <Glasses className="w-4 h-4" />
+                <span>VisionFlow Cloud</span>
+              </div>
+              <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
             </div>
             <p className="text-[9px] text-zinc-600 normal-case mt-0.5 font-medium">
-              Android Optimized Clinic System
+              Free Real-time Multi-Device Sync
             </p>
           </div>
         </div>
@@ -135,18 +138,22 @@ export const Layout: React.FC<LayoutProps> = ({
           <span>VisionFlow</span>
         </div>
 
-        <div className="flex items-center gap-2">
+        <div className="flex items-center gap-1.5 sm:gap-2">
+          <div className="flex items-center gap-1 px-2 py-0.5 bg-[#e1fff3] border border-black text-[9px] sm:text-[10px] font-black uppercase tracking-wider text-emerald-900">
+            <span className="w-1.5 h-1.5 rounded-full bg-emerald-600 animate-pulse" />
+            <span>Synced</span>
+          </div>
           {isInstallable && (
             <button
               onClick={install}
-              className="px-2.5 py-1 bg-[#e1fff3] border border-black text-[10px] font-black uppercase tracking-wider flex items-center gap-1 active:bg-white"
+              className="px-2 py-0.5 bg-[#e1f4ff] border border-black text-[10px] font-black uppercase tracking-wider flex items-center gap-1 active:bg-white"
             >
               <Smartphone size={12} />
               <span>Install</span>
             </button>
           )}
           <span className="text-[10px] font-black px-2 py-0.5 bg-black text-white uppercase tracking-wider">
-            {recordCount} Records
+            {recordCount}
           </span>
         </div>
       </header>

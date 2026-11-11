@@ -1,0 +1,6 @@
+{
+  "summary":  "Implementation plan and comprehensive master prompt to upgrade the legacy VisionFlow application in Google AI Studio Build. Defines backwards-compatible data schema mappings to preserve past records, Android-optimized navigation and camera workflows, real-time Firestore database synchronization, and exact prompt instructions for upgrading the legacy app.",
+  "updatedAt":  "2026-11-11T12:30:12.496900373Z",
+  "requestFeedback":  true,
+  "userFacing":  true
+}
